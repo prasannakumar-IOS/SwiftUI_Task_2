@@ -11,8 +11,10 @@ struct STLoginView: View {
     
     @State var userEmail: String = ""
     @State var userPassword: String = ""
+    @State private var isRecipeViewOk = false
     
     var body: some View {
+        NavigationView {
         ZStack {
             ScrollView {
                 VStack(alignment: .leading) {
@@ -42,11 +44,13 @@ struct STLoginView: View {
                             LoginButtonTextCustomViews(titleText: forgetPasswordText)
                         }
                         Spacer().frame(height: 21)
-                        Button(action: {}) {
-                            Text(logIn)
-                                .font(.custom("STLoginTextFont", size: 25))
-                                .foregroundColor(.black)
-                        }.LoginButtonModifiers()
+                        NavigationLink(destination: RecipesView(), isActive: $isRecipeViewOk) {
+                            Button(action: {isRecipeViewOk = true}) {
+                                Text(logIn)
+                                    .font(.custom("STLoginTextFont", size: 25))
+                                    .foregroundColor(.black)
+                            }.LoginButtonModifiers()
+                        }
                         Spacer().frame(height: 35)
                         HStack {
                             LoginLargeTitleCustomViews(titleText: newAccountText)
@@ -59,7 +63,8 @@ struct STLoginView: View {
                 Spacer()
             }.ignoresSafeArea()
         }
-    }
+        }.navigationViewStyle(StackNavigationViewStyle())
+}
 }
 
 struct STLoginView_Previews: PreviewProvider {

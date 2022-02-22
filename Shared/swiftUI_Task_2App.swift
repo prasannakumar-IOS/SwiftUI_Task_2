@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct swiftUI_Task_2App: App {
+    
+    @StateObject var recipesDetails = RecipesDetails()
+    
     var body: some Scene {
         WindowGroup {
             STLoginView()
+                .environmentObject(recipesDetails)
         }
     }
 }
