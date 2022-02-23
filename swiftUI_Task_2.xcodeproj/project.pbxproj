@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		D432078627BFA5AC00FA4933 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D432078527BFA5AC00FA4933 /* Poppins-Bold.ttf */; };
 		D432078727BFA5AC00FA4933 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D432078527BFA5AC00FA4933 /* Poppins-Bold.ttf */; };
+		D447E58F27C5F116007C059B /* STExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D447E58E27C5F116007C059B /* STExploreView.swift */; };
+		D447E59027C5F116007C059B /* STExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D447E58E27C5F116007C059B /* STExploreView.swift */; };
+		D447E59227C5F75B007C059B /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D447E59127C5F75B007C059B /* CommonFunctions.swift */; };
+		D447E59327C5F75B007C059B /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D447E59127C5F75B007C059B /* CommonFunctions.swift */; };
+		D447E59527C6214B007C059B /* STExploreCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D447E59427C6214B007C059B /* STExploreCellView.swift */; };
+		D447E59627C6214B007C059B /* STExploreCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D447E59427C6214B007C059B /* STExploreCellView.swift */; };
+		D447E59827C62208007C059B /* STRecipesCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D447E59727C62208007C059B /* STRecipesCellView.swift */; };
+		D447E59927C62208007C059B /* STRecipesCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D447E59727C62208007C059B /* STRecipesCellView.swift */; };
+		D447E59B27C624DE007C059B /* STDishDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D447E59A27C624DE007C059B /* STDishDetailsView.swift */; };
+		D447E59C27C624DE007C059B /* STDishDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D447E59A27C624DE007C059B /* STDishDetailsView.swift */; };
 		D4622BD327C51C3A0012924D /* RecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4622BD227C51C3A0012924D /* RecipesViewModel.swift */; };
 		D466B3C127BF5DCE003A3CE9 /* swiftUI_Task_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466B3B127BF5DCC003A3CE9 /* swiftUI_Task_2App.swift */; };
 		D466B3C227BF5DCE003A3CE9 /* swiftUI_Task_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466B3B127BF5DCC003A3CE9 /* swiftUI_Task_2App.swift */; };
@@ -28,6 +38,11 @@
 
 /* Begin PBXFileReference section */
 		D432078527BFA5AC00FA4933 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		D447E58E27C5F116007C059B /* STExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STExploreView.swift; sourceTree = "<group>"; };
+		D447E59127C5F75B007C059B /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
+		D447E59427C6214B007C059B /* STExploreCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STExploreCellView.swift; sourceTree = "<group>"; };
+		D447E59727C62208007C059B /* STRecipesCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STRecipesCellView.swift; sourceTree = "<group>"; };
+		D447E59A27C624DE007C059B /* STDishDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STDishDetailsView.swift; sourceTree = "<group>"; };
 		D4622BD227C51C3A0012924D /* RecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewModel.swift; sourceTree = "<group>"; };
 		D466B3B127BF5DCC003A3CE9 /* swiftUI_Task_2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftUI_Task_2App.swift; sourceTree = "<group>"; };
 		D466B3B227BF5DCC003A3CE9 /* STLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STLoginView.swift; sourceTree = "<group>"; };
@@ -114,6 +129,10 @@
 			children = (
 				D466B3B227BF5DCC003A3CE9 /* STLoginView.swift */,
 				D478F20927C3891400005E0A /* STRecipesView.swift */,
+				D447E58E27C5F116007C059B /* STExploreView.swift */,
+				D447E59427C6214B007C059B /* STExploreCellView.swift */,
+				D447E59727C62208007C059B /* STRecipesCellView.swift */,
+				D447E59A27C624DE007C059B /* STDishDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -127,6 +146,7 @@
 				D466B3DC27BF89EA003A3CE9 /* Modifiers.swift */,
 				D466B3DE27BF8BDD003A3CE9 /* Constants.swift */,
 				D4F9034827C4D0FA00E6E632 /* RecipesDetails.swift */,
+				D447E59127C5F75B007C059B /* CommonFunctions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -233,14 +253,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D447E59B27C624DE007C059B /* STDishDetailsView.swift in Sources */,
 				D4F9034927C4D0FB00E6E632 /* RecipesDetails.swift in Sources */,
 				D466B3C327BF5DCE003A3CE9 /* STLoginView.swift in Sources */,
 				D466B3DB27BF83EB003A3CE9 /* customViews.swift in Sources */,
+				D447E59527C6214B007C059B /* STExploreCellView.swift in Sources */,
 				D466B3C127BF5DCE003A3CE9 /* swiftUI_Task_2App.swift in Sources */,
 				D466B3D227BF65D7003A3CE9 /* ColorExtensions.swift in Sources */,
 				D466B3DD27BF89EA003A3CE9 /* Modifiers.swift in Sources */,
 				D4622BD327C51C3A0012924D /* RecipesViewModel.swift in Sources */,
+				D447E58F27C5F116007C059B /* STExploreView.swift in Sources */,
+				D447E59827C62208007C059B /* STRecipesCellView.swift in Sources */,
 				D466B3DF27BF8BDD003A3CE9 /* Constants.swift in Sources */,
+				D447E59227C5F75B007C059B /* CommonFunctions.swift in Sources */,
 				D478F20A27C3891400005E0A /* STRecipesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,8 +275,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D466B3C427BF5DCE003A3CE9 /* STLoginView.swift in Sources */,
+				D447E59927C62208007C059B /* STRecipesCellView.swift in Sources */,
+				D447E59C27C624DE007C059B /* STDishDetailsView.swift in Sources */,
 				D478F20B27C3891400005E0A /* STRecipesView.swift in Sources */,
+				D447E59327C5F75B007C059B /* CommonFunctions.swift in Sources */,
+				D447E59627C6214B007C059B /* STExploreCellView.swift in Sources */,
 				D466B3C227BF5DCE003A3CE9 /* swiftUI_Task_2App.swift in Sources */,
+				D447E59027C5F116007C059B /* STExploreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

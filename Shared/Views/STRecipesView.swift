@@ -12,19 +12,12 @@ struct RecipesView: View {
     @State private var searchText = ""
     @State private var selectedIndex = 0
     @State private var columns: [GridItem] = Array(repeating: .init(.flexible()), count: UIDevice.current.userInterfaceIdiom == .pad ? 4 : 2)
-    @StateObject var recipesAvailable = RecipesDetails()
-    @State var indexCount: Int = 0
-    var recipesViewModel = RecipesViewModel()
+    @EnvironmentObject var recipeAvailable: RecipesDetails
+    @Environment(\.dismiss) private var dismiss
+    var commonFunction = CommonFunction()
 
     init() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithTransparentBackground()
-        appearance.titleTextAttributes = [
-            .font : UIFont(name: "Poppins-Bold" ,size: 30) ?? UIFont.systemFont(ofSize: 30),
-            NSAttributedString.Key.foregroundColor : UIColor.black
-        ]
-        UINavigationBar.appearance().scrollEdgeAppearance = appearance
-        UINavigationBar.appearance().standardAppearance = appearance
+        commonFunction.customizeNavigationBar()
     }
     
     var body: some View {
@@ -34,19 +27,12 @@ struct RecipesView: View {
             Spacer().frame(height: 25)
             RecipesSegmentControllerView()
             Spacer().frame(height: 25)
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 LazyVGrid(columns: columns) {
-                    ForEach(0..<recipesAvailable.recipesDetails.count, id: \.self) { recipes in
-                        RecipesGridView(recipes: recipesAvailable.recipesDetails[recipes], indexCount: recipes)
-//                        VStack {
-//                            ZStack {
-//                                Image(uiImage: recipes.recipeThumbNail)
-//                                    .resizable()
-//                                    .frame(height: 100)
-//                                    .cornerRadius(20)
-//
-//                            }
-//                        }
+                    ForEach(0..<recipeAvailable.recipesDetails.count, id: \.self) { recipes in
+                        NavigationLink(destination: STExploreView(recipeIndex: recipes)) {
+                            STRecipesCellView(recipes: recipeAvailable.recipesDetails[recipes], indexCount: recipes)
+                        }
                     }
                 }
             }
@@ -54,17 +40,11 @@ struct RecipesView: View {
         }
         .padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
         .navigationTitle("Recipes")
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: Button(action: {}) {
-            Image("STMenuBarButton")
-                .resizable()
-                .frame(width: 40, height: 40)
+        .NavigationViewModifiers()
+        .navigationBarItems(leading: Button(action: {dismiss()}) {
+            NavigationLeftViewButton()
         }, trailing: Button(action: {}) {
-            Image("STDefaultProfilePicture")
-                .resizable()
-                .frame(width: 40, height: 33)
-                .cornerRadius(20)
+            NavigationRightViewButton()
         })
     }
 }

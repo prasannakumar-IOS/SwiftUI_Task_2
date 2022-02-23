@@ -18,9 +18,22 @@ struct LoginButtonModifier : ViewModifier {
     }
 }
 
+struct NavigationViewModifier : ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true)
+    }
+}
+
+
 extension View {
+    
     func LoginButtonModifiers() -> some View {
         modifier(LoginButtonModifier())
+    }
+    func NavigationViewModifiers() -> some View {
+        modifier(NavigationViewModifier())
     }
 }
 

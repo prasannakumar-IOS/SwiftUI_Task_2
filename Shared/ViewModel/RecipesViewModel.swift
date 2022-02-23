@@ -8,7 +8,22 @@
 import SwiftUI
 
 class RecipesViewModel {
-    func customGridIndex(index: Int) -> Int {
-        return index + 3
+    
+    func customGridIndex(index: Float) -> Bool {
+        let indexes = index/2
+        let recipesIndex = Int(floor(indexes))
+        if recipesIndex % 2 == 0 {
+            if indexes.rounded(.up) == indexes.rounded(.down) {
+                return true
+            } else {
+                return false
+            }
+        } else {
+            if indexes.rounded(.up) == indexes.rounded(.down) {
+                return false
+            } else {
+                return true
+            }
+        }
     }
 }
