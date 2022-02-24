@@ -24,7 +24,7 @@ struct STExploreView: View {
         VStack(alignment: .leading) {
             Spacer().frame(height: 20)
             Text(recipeAvailable.recipesDetails[recipeIndex].recipeCategory)
-                .font(.custom("Poppins-Bold", size: 20))
+                .font(.custom(kRecipesFont, size: 20))
             Spacer().frame(height: 20)
             ScrollView {
                 LazyVGrid(columns: columns) {

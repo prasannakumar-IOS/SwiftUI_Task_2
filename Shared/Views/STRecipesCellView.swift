@@ -28,12 +28,12 @@ struct STRecipesCellView: View {
             Spacer().frame(height: 15)
             Text(recipes.recipeName)
                 .foregroundColor(.black)
-                .font(.custom("Poppins-Bold", size: 20))
+                .font(.custom(kRecipesFont, size: 20))
                 .lineLimit(1)
                 .truncationMode(.tail)
             Text(recipes.recipeCategory)
                 .foregroundColor(.gray).opacity(0.6)
-                .font(.custom("Poppins-Bold", size: 15))
+                .font(.custom(kRecipesFont, size: 15))
             Spacer()
         }
     }

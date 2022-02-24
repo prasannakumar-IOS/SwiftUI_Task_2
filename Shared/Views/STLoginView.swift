@@ -24,7 +24,7 @@ struct STLoginView: View {
                         .ignoresSafeArea()
                     Group {
                         Text(logIn)
-                            .font(.custom("Poppins-Bold", size: 35))
+                            .font(.custom(kRecipesFont, size: 35))
                             .padding(.top, -60)
                         Spacer().frame(height: 38)
                         LoginTitleCustomViews(titleText: emailAddress)

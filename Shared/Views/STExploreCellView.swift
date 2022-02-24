@@ -28,7 +28,7 @@ struct STExploreCellView: View {
                         Spacer().frame(width: 3)
                         Text(dish.dishReviews)
                             .foregroundColor(.black)
-                            .font(.custom("Poppins-Bold", size: 15))
+                            .font(.custom(kRecipesFont, size: 15))
                             .frame(alignment: .bottomTrailing)
                             .padding(.trailing, 7)
                     }
@@ -38,7 +38,7 @@ struct STExploreCellView: View {
                 Spacer().frame(width: 10)
                 Text(dish.dishTimeTaken)
                     .foregroundColor(.black)
-                    .font(.custom("Poppins-Bold", size: 15))
+                    .font(.custom(kRecipesFont, size: 15))
             }
         }
     }
