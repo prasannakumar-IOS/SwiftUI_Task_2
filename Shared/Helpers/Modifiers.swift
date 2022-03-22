@@ -36,9 +36,3 @@ extension View {
         modifier(NavigationViewModifier())
     }
 }
-
-//struct Modifiers_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Modifiers()
-//    }
-//}
