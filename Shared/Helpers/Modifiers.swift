@@ -18,6 +18,16 @@ struct LoginButtonModifier : ViewModifier {
     }
 }
 
+struct SignupButtonModifier : ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding()
+            .frame(maxWidth: .infinity, maxHeight: 45)
+            .background(Color.STForgetPasswordColor)
+            .cornerRadius(15)
+    }
+}
+
 struct NavigationViewModifier : ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -26,13 +36,29 @@ struct NavigationViewModifier : ViewModifier {
     }
 }
 
-
+struct SignupTextModifier : ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .foregroundColor(.black)
+            .font(.system(size: 18))
+    }
+}
+    
 extension View {
     
     func LoginButtonModifiers() -> some View {
         modifier(LoginButtonModifier())
     }
+    
+    func SignupButtonModifiers() -> some View {
+        modifier(SignupButtonModifier())
+    }
+    
     func NavigationViewModifiers() -> some View {
         modifier(NavigationViewModifier())
+    }
+    
+    func SignupTextModifiers() -> some View {
+        modifier(SignupTextModifier())
     }
 }

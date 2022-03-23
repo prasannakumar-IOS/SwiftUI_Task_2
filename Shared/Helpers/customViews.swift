@@ -369,3 +369,16 @@ struct DishTitleRatingView: View {
         }
     }
 }
+
+struct STSignupTextField: TextFieldStyle {
+    func _body(configuration: TextField<Self._Label>) -> some View {
+        configuration
+            .padding(15)
+            .font(.custom("Lato-Semibold", size: 17))
+            .frame(height: 40)
+            .background(Color.white)
+            .cornerRadius(5)
+            .foregroundColor(.black)
+    }
+}
+

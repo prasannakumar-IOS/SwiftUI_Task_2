@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4157D9B27EAD34E00B037C4 /* STSignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4157D9A27EAD34E00B037C4 /* STSignupView.swift */; };
+		D4157D9C27EAD34E00B037C4 /* STSignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4157D9A27EAD34E00B037C4 /* STSignupView.swift */; };
+		D4157D9E27EADC4600B037C4 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4157D9D27EADC4600B037C4 /* SignupViewModel.swift */; };
+		D4157D9F27EADC4600B037C4 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4157D9D27EADC4600B037C4 /* SignupViewModel.swift */; };
 		D432078627BFA5AC00FA4933 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D432078527BFA5AC00FA4933 /* Poppins-Bold.ttf */; };
 		D432078727BFA5AC00FA4933 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D432078527BFA5AC00FA4933 /* Poppins-Bold.ttf */; };
 		D447E58F27C5F116007C059B /* STExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D447E58E27C5F116007C059B /* STExploreView.swift */; };
@@ -37,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D4157D9A27EAD34E00B037C4 /* STSignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STSignupView.swift; sourceTree = "<group>"; };
+		D4157D9D27EADC4600B037C4 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		D432078527BFA5AC00FA4933 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		D447E58E27C5F116007C059B /* STExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STExploreView.swift; sourceTree = "<group>"; };
 		D447E59127C5F75B007C059B /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
@@ -81,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				D4622BD227C51C3A0012924D /* RecipesViewModel.swift */,
+				D4157D9D27EADC4600B037C4 /* SignupViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -128,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				D466B3B227BF5DCC003A3CE9 /* STLoginView.swift */,
+				D4157D9A27EAD34E00B037C4 /* STSignupView.swift */,
 				D478F20927C3891400005E0A /* STRecipesView.swift */,
 				D447E58E27C5F116007C059B /* STExploreView.swift */,
 				D447E59427C6214B007C059B /* STExploreCellView.swift */,
@@ -255,6 +263,8 @@
 			files = (
 				D447E59B27C624DE007C059B /* STDishDetailsView.swift in Sources */,
 				D4F9034927C4D0FB00E6E632 /* RecipesDetails.swift in Sources */,
+				D4157D9E27EADC4600B037C4 /* SignupViewModel.swift in Sources */,
+				D4157D9B27EAD34E00B037C4 /* STSignupView.swift in Sources */,
 				D466B3C327BF5DCE003A3CE9 /* STLoginView.swift in Sources */,
 				D466B3DB27BF83EB003A3CE9 /* customViews.swift in Sources */,
 				D447E59527C6214B007C059B /* STExploreCellView.swift in Sources */,
@@ -279,6 +289,8 @@
 				D447E59C27C624DE007C059B /* STDishDetailsView.swift in Sources */,
 				D478F20B27C3891400005E0A /* STRecipesView.swift in Sources */,
 				D447E59327C5F75B007C059B /* CommonFunctions.swift in Sources */,
+				D4157D9C27EAD34E00B037C4 /* STSignupView.swift in Sources */,
+				D4157D9F27EADC4600B037C4 /* SignupViewModel.swift in Sources */,
 				D447E59627C6214B007C059B /* STExploreCellView.swift in Sources */,
 				D466B3C227BF5DCE003A3CE9 /* swiftUI_Task_2App.swift in Sources */,
 				D447E59027C5F116007C059B /* STExploreView.swift in Sources */,

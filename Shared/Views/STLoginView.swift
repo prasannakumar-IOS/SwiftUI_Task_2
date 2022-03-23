@@ -9,9 +9,10 @@ import SwiftUI
 
 struct STLoginView: View {
     
-    @State var userEmail: String = ""
-    @State var userPassword: String = ""
+    @State private var userEmail: String = ""
+    @State private var userPassword: String = ""
     @State private var isRecipeViewOk = false
+    @State private var isNewAccount = false
     
     var body: some View {
         NavigationView {
@@ -54,8 +55,10 @@ struct STLoginView: View {
                         Spacer().frame(height: 35)
                         HStack {
                             LoginLargeTitleCustomViews(titleText: newAccountText)
-                            Button(action: {}) {
-                                LoginButtonTextCustomViews(titleText: createAccountText)
+                            NavigationLink(destination: STSignupView(), isActive: $isNewAccount) {
+                                Button(action: {isNewAccount = true}) {
+                                    LoginButtonTextCustomViews(titleText: createAccountText)
+                                }
                             }
                         }
                     }
